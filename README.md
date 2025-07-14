@@ -37,4 +37,17 @@ brew install ollama
 # Using curl
 curl -fsSL https://ollama.ai/install.sh | sh
 ```
+### 3. Download Llama Model
+After installing Ollama, download the Llama model:
+```bash
+ollama pull llama2
+```
+
+## Installation
+
+1. **Clone or download this repository**
+2. **Install Python dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
