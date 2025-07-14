@@ -50,4 +50,34 @@ ollama pull llama2
    ```bash
    pip install -r requirements.txt
    ```
+## Usage
+
+### Basic Usage
+```bash
+python reddit_persona_generator.py "https://www.reddit.com/user/kojied/"
+```
+
+### Advanced Usage
+```bash
+# Use a different model
+python reddit_persona_generator.py "https://www.reddit.com/user/Hungry-Move-6603/" --model llama2:13b
+```
+
+### Supported URL Formats
+- `https://www.reddit.com/user/username/`
+- `https://www.reddit.com/u/username/`
+- `https://reddit.com/user/username`
+
+## Output
+
+The script generates a text file in the `sample_outputs/` directory with the following structure:
+
+```
+Reddit User Persona Analysis
+Username: kojied
+Generated: 2024-01-15 14:30:25
+==================================================
+
+[Detailed persona analysis with citations]
+```
 
