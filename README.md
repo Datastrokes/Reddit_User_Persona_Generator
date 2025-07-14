@@ -80,4 +80,69 @@ Generated: 2024-01-15 14:30:25
 
 [Detailed persona analysis with citations]
 ```
+### Persona Sections Include:
+1. **Demographics & Background**: Age range, location hints, profession
+2. **Interests & Hobbies**: Main topics, frequented subreddits
+3. **Personality Traits**: Communication style, attitude, values
+4. **Technical Knowledge**: Expertise levels in various topics
+5. **Online Behavior**: Interaction patterns, posting frequency
+6. **Values & Beliefs**: Political views, ethical stances
+7. **Communication Style**: Writing tone, vocabulary, formality
+
+## Example Outputs
+
+The `sample_outputs/` directory contains example persona files for:
+- `kojied_persona.txt` - Analysis of user "kojied"
+- `Hungry-Move-6603_persona.txt` - Analysis of user "Hungry-Move-6603"
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Ollama not running**:
+   ```bash
+   # Start Ollama service
+   ollama serve
+   ```
+
+2. **Model not found**:
+   ```bash
+   # List available models
+   ollama list
+   
+   # Pull the required model
+   ollama pull llama2
+   ```
+
+3. **Reddit rate limiting**:
+   - The script includes delays and proper headers
+   - If issues persist, try running later
+
+4. **No data found**:
+   - User might have private profile
+   - User might have no posts/comments
+   - Check if the username is correct
+
+### Error Messages
+
+- `"Could not extract username from URL"`: Invalid Reddit URL format
+- `"Error scraping data"`: Network or Reddit API issues
+- `"Error generating persona with Ollama"`: Ollama service or model issues
+
+## Technical Details
+
+### Data Collection
+- Uses Reddit's JSON endpoints for efficient data retrieval
+- Scrapes user profile pages for additional information
+- Handles various Reddit URL formats
+
+### LLM Integration
+- Uses Ollama Python client for local model inference
+- Configurable model selection (llama2, llama2:13b, etc.)
+- Structured prompts for consistent persona generation
+
+### Privacy & Ethics
+- Only accesses publicly available Reddit data
+- Respects Reddit's terms of service
+- No personal information is stored beyond the analysis
 
