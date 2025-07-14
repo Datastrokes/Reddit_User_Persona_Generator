@@ -146,3 +146,13 @@ The `sample_outputs/` directory contains example persona files for:
 - Respects Reddit's terms of service
 - No personal information is stored beyond the analysis
 
+
+## Contributing
+
+Feel free to submit issues or pull requests to improve the script.
+
+## License
+
+This project is for educational purposes. Please respect Reddit's terms of service and user privacy.
+
+
